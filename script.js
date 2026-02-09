@@ -94,26 +94,23 @@ function mostrarPagina(numPagina) {
       div.appendChild(desc);
     }
 
-// Botón WhatsApp con ícono y texto
-const btnWhatsApp = document.createElement('a');
-btnWhatsApp.className = 'whatsapp-btn';
-btnWhatsApp.href = `https://wa.me/${WHATSAPP_NUMERO}?text=Hola,%20quiero%20consultar%20por%20el%20producto:%20${encodeURIComponent(prod.nombre)}`;
-btnWhatsApp.target = "_blank";
+    // Botón WhatsApp con ícono + texto
+    const btnWhatsApp = document.createElement('a');
+    btnWhatsApp.className = 'whatsapp-btn';
+    btnWhatsApp.href = `https://wa.me/${WHATSAPP_NUMERO}?text=Hola,%20quiero%20consultar%20por%20el%20producto:%20${encodeURIComponent(prod.nombre)}`;
+    btnWhatsApp.target = "_blank";
 
-// Ícono
-const icono = document.createElement('img');
-icono.src = '/productos/whatsapp.jpeg'; // ícono de WhatsApp en tu carpeta productos
-icono.alt = 'WhatsApp';
+    const icono = document.createElement('img');
+    icono.src = '/productos/whatsapp.jpeg'; // ícono de WhatsApp
+    icono.alt = 'WhatsApp';
 
-// Texto
-const texto = document.createElement('span');
-texto.textContent = "Consultar";
+    const texto = document.createElement('span');
+    texto.textContent = "Consultar";
 
-// Unificamos ícono + texto
-btnWhatsApp.appendChild(icono);
-btnWhatsApp.appendChild(texto);
+    btnWhatsApp.appendChild(icono);
+    btnWhatsApp.appendChild(texto);
 
-div.appendChild(btnWhatsApp);
+    div.appendChild(btnWhatsApp);
 
     contenedor.appendChild(div);
   });
