@@ -88,48 +88,4 @@ function mostrarPagina(numPagina) {
 
     // descuento (solo si > 0)
     if (prod.descuento !== '0%') {
-      const desc = document.createElement('p');
-      desc.className = 'descuento';
-      desc.textContent = `Descuento: ${prod.descuento} → $${prod.precioDesc}`;
-      div.appendChild(desc);
-    }
-
-    // Botón WhatsApp con ícono + texto
-    const btnWhatsApp = document.createElement('a');
-    btnWhatsApp.className = 'whatsapp-btn';
-    btnWhatsApp.href = `https://wa.me/${WHATSAPP_NUMERO}?text=Hola,%20quiero%20consultar%20por%20el%20producto:%20${encodeURIComponent(prod.nombre)}`;
-    btnWhatsApp.target = "_blank";
-
-    const icono = document.createElement('img');
-    icono.src = '/productos/whatsapp.jpeg'; // ícono de WhatsApp
-    icono.alt = 'WhatsApp';
-
-    const texto = document.createElement('span');
-    texto.textContent = "Consultar";
-
-    btnWhatsApp.appendChild(icono);
-    btnWhatsApp.appendChild(texto);
-
-    div.appendChild(btnWhatsApp);
-
-    contenedor.appendChild(div);
-  });
-
-  generarPaginador();
-}
-
-function generarPaginador() {
-  const totalPaginas = Math.ceil(productos.length / ITEMS_POR_PAGINA);
-  const paginador = document.getElementById('paginador');
-  paginador.innerHTML = '';
-
-  for (let i = 1; i <= totalPaginas; i++) {
-    const boton = document.createElement('button');
-    boton.textContent = i;
-    if (i === paginaActual) boton.classList.add('active');
-    boton.onclick = () => mostrarPagina(i);
-    paginador.appendChild(boton);
-  }
-}
-
-cargarProductos();
+      const desc = document
