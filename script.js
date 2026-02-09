@@ -94,13 +94,26 @@ function mostrarPagina(numPagina) {
       div.appendChild(desc);
     }
 
-    // Botón WhatsApp
-    const btnWhatsApp = document.createElement('a');
-    btnWhatsApp.className = 'whatsapp-btn';
-    btnWhatsApp.href = `https://wa.me/${WHATSAPP_NUMERO}?text=Hola,%20quiero%20consultar%20por%20el%20producto:%20${encodeURIComponent(prod.nombre)}`;
-    btnWhatsApp.target = "_blank";
-    btnWhatsApp.textContent = "Consultar por WhatsApp";
-    div.appendChild(btnWhatsApp);
+// Botón WhatsApp con ícono y texto
+const btnWhatsApp = document.createElement('a');
+btnWhatsApp.className = 'whatsapp-btn';
+btnWhatsApp.href = `https://wa.me/${WHATSAPP_NUMERO}?text=Hola,%20quiero%20consultar%20por%20el%20producto:%20${encodeURIComponent(prod.nombre)}`;
+btnWhatsApp.target = "_blank";
+
+// Ícono
+const icono = document.createElement('img');
+icono.src = '/productos/whatsapp.png'; // ícono de WhatsApp en tu carpeta productos
+icono.alt = 'WhatsApp';
+
+// Texto
+const texto = document.createElement('span');
+texto.textContent = "Consultar";
+
+// Unificamos ícono + texto
+btnWhatsApp.appendChild(icono);
+btnWhatsApp.appendChild(texto);
+
+div.appendChild(btnWhatsApp);
 
     contenedor.appendChild(div);
   });
