@@ -1,14 +1,14 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f9f9f9;
   margin: 0;
   padding: 0;
 }
 
 header {
-  background: #333;
+  background: #222;
   color: #fff;
-  padding: 15px;
+  padding: 20px;
   text-align: center;
 }
 
@@ -22,31 +22,52 @@ header {
 .item {
   background: #fff;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  margin: 10px;
-  width: 250px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  margin: 15px;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
 }
 
 .item img {
   width: 100%;
   height: auto;
-  border-bottom: 1px solid #ddd;
 }
 
 .item h2 {
-  margin: 10px 0 5px;
+  margin: 10px;
+  font-size: 18px;
 }
 
 .item p {
-  padding: 5px 10px;
+  margin: 5px 10px;
 }
 
-footer {
-  background: #333;
-  color: #fff;
+.precio {
+  font-weight: bold;
+  color: #333;
+}
+
+.descuento {
+  color: #d9534f;
+  font-weight: bold;
+}
+
+.paginador {
   text-align: center;
-  padding: 15px;
-  margin-top: 20px;
+  margin: 20px;
+}
+
+.paginador button {
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.paginador button.active {
+  background: #d9534f;
 }
