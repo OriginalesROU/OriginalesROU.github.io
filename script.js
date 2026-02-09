@@ -41,6 +41,12 @@ function mostrarPagina(numPagina) {
     imagen.src = '/productos/' + prod.imagenes[indiceImg].trim();
     imgContainer.appendChild(imagen);
 
+    // Indicador de posición
+    const indicador = document.createElement('div');
+    indicador.className = 'indicador';
+    indicador.textContent = `${indiceImg + 1}/${prod.imagenes.length}`;
+    imgContainer.appendChild(indicador);
+
     if (prod.imagenes.length > 1) {
       const prevBtn = document.createElement('button');
       prevBtn.className = 'prev';
@@ -48,6 +54,7 @@ function mostrarPagina(numPagina) {
       prevBtn.onclick = () => {
         indiceImg = (indiceImg - 1 + prod.imagenes.length) % prod.imagenes.length;
         imagen.src = '/productos/' + prod.imagenes[indiceImg].trim();
+        indicador.textContent = `${indiceImg + 1}/${prod.imagenes.length}`;
       };
 
       const nextBtn = document.createElement('button');
@@ -56,6 +63,7 @@ function mostrarPagina(numPagina) {
       nextBtn.onclick = () => {
         indiceImg = (indiceImg + 1) % prod.imagenes.length;
         imagen.src = '/productos/' + prod.imagenes[indiceImg].trim();
+        indicador.textContent = `${indiceImg + 1}/${prod.imagenes.length}`;
       };
 
       imgContainer.appendChild(prevBtn);
