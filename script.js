@@ -1,4 +1,4 @@
-const ITEMS_POR_PAGINA = 2;
+const ITEMS_POR_PAGINA = 4;
 let productos = [];
 let paginaActual = 1;
 
@@ -35,7 +35,7 @@ function mostrarPagina(numPagina) {
     // imágenes
     prod.imagenes.forEach(img => {
       const imagen = document.createElement('img');
-      imagen.src = 'productos/' + img;
+      imagen.src = '/productos/'+ img;
       div.appendChild(imagen);
     });
 
