@@ -32,12 +32,37 @@ function mostrarPagina(numPagina) {
     const div = document.createElement('div');
     div.className = 'item';
 
-    // imágenes
-    prod.imagenes.forEach(img => {
-      const imagen = document.createElement('img');
-      imagen.src = '/productos/'+ img;
-      div.appendChild(imagen);
-    });
+    // Carrusel de imágenes
+    let indiceImg = 0;
+    const imgContainer = document.createElement('div');
+    imgContainer.className = 'carousel';
+
+    const imagen = document.createElement('img');
+    imagen.src = '/productos/' + prod.imagenes[indiceImg].trim();
+    imgContainer.appendChild(imagen);
+
+    if (prod.imagenes.length > 1) {
+      const prevBtn = document.createElement('button');
+      prevBtn.className = 'prev';
+      prevBtn.textContent = '◀';
+      prevBtn.onclick = () => {
+        indiceImg = (indiceImg - 1 + prod.imagenes.length) % prod.imagenes.length;
+        imagen.src = '/productos/' + prod.imagenes[indiceImg].trim();
+      };
+
+      const nextBtn = document.createElement('button');
+      nextBtn.className = 'next';
+      nextBtn.textContent = '▶';
+      nextBtn.onclick = () => {
+        indiceImg = (indiceImg + 1) % prod.imagenes.length;
+        imagen.src = '/productos/' + prod.imagenes[indiceImg].trim();
+      };
+
+      imgContainer.appendChild(prevBtn);
+      imgContainer.appendChild(nextBtn);
+    }
+
+    div.appendChild(imgContainer);
 
     // nombre
     const titulo = document.createElement('h2');
