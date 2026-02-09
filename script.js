@@ -35,7 +35,7 @@ function mostrarPagina(numPagina) {
     // imágenes
     prod.imagenes.forEach(img => {
       const imagen = document.createElement('img');
-      imagen.src = img;
+      imagen.src = 'productos/' + img;
       div.appendChild(imagen);
     });
 
