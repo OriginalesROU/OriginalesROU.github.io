@@ -1,3 +1,4 @@
+/* Estilo general */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   background: #f0f2f5;
@@ -6,6 +7,7 @@ body {
   color: #333;
 }
 
+/* Encabezado */
 header {
   background: linear-gradient(135deg, #222, #444);
   color: #fff;
@@ -24,6 +26,7 @@ header p {
   color: #ddd;
 }
 
+/* Contenedor de productos */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -31,6 +34,7 @@ header p {
   padding: 20px;
 }
 
+/* Tarjeta de producto */
 .item {
   background: #fff;
   border-radius: 10px;
@@ -41,12 +45,6 @@ header p {
 
 .item:hover {
   transform: translateY(-5px);
-}
-
-.item img {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #eee;
 }
 
 .item h2 {
@@ -69,14 +67,68 @@ header p {
   color: #d9534f;
 }
 
-footer {
-  background: #222;
-  color: #fff;
+/* Carrusel */
+.carousel {
+  position: relative;
   text-align: center;
-  padding: 15px;
-  margin-top: 30px;
 }
 
+.carousel img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #eee;
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.2em;
+}
+
+.carousel .prev {
+  left: 10px;
+}
+
+.carousel .next {
+  right: 10px;
+}
+
+.indicador {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.9em;
+}
+
+/* Botón WhatsApp */
+.whatsapp-btn {
+  display: inline-block;
+  margin: 10px 15px;
+  padding: 10px 15px;
+  background: #25D366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+}
+
+/* Paginador */
 .paginador {
   text-align: center;
   margin: 20px;
@@ -97,74 +149,11 @@ footer {
   background: #d9534f;
 }
 
-.carousel {
-  position: relative;
+/* Pie de página */
+footer {
+  background: #222;
+  color: #fff;
   text-align: center;
-}
-
-.carousel img {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #eee;
-}
-
-.carousel button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: #fff;
-  border: none;
-  padding: 8px;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.carousel .prev {
-  left: 10px;
-}
-
-.carousel .next {
-  right: 10px;
-}
-.carousel {
-  position: relative;
-  text-align: center;
-}
-
-.carousel img {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #eee;
-}
-
-.carousel button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: #fff;
-  border: none;
-  padding: 8px;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.carousel .prev {
-  left: 10px;
-}
-
-.carousel .next {
-  right: 10px;
-}
-
-.indicador {
-  position: absolute;
-  bottom: 8px;
-  right: 12px;
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  padding: 4px 8px;
-  border-radius: 12px;
-  font-size: 0.9em;
+  padding: 15px;
+  margin-top: 30px;
 }
