@@ -111,10 +111,11 @@ header p {
   font-size: 0.9em;
 }
 
+/* Botón WhatsApp */
 .whatsapp-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px; /* espacio entre ícono y texto */
+  gap: 8px;
   margin: 10px 15px;
   padding: 10px 15px;
   background: #25D366;
@@ -132,10 +133,6 @@ header p {
 
 .whatsapp-btn span {
   font-size: 1em;
-}
-
-.whatsapp-btn:hover {
-  background: #1ebe5d;
 }
 
 .whatsapp-btn:hover {
