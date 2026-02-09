@@ -102,7 +102,7 @@ btnWhatsApp.target = "_blank";
 
 // Ícono
 const icono = document.createElement('img');
-icono.src = '/productos/whatsapp.png'; // ícono de WhatsApp en tu carpeta productos
+icono.src = '/productos/whatsapp.jpeg'; // ícono de WhatsApp en tu carpeta productos
 icono.alt = 'WhatsApp';
 
 // Texto
