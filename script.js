@@ -57,6 +57,7 @@ function mostrarPagina(numPagina) {
       prevBtn.onclick = () => {
         indiceImg = (indiceImg - 1 + prod.imagenes.length) % prod.imagenes.length;
         imagen.src = '/productos/' + prod.imagenes[indiceImg].trim();
+        alert(imagen.src)
         indicador.textContent = `${indiceImg + 1}/${prod.imagenes.length}`;
       };
 
