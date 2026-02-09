@@ -2,6 +2,9 @@ const ITEMS_POR_PAGINA = 4;
 let productos = [];
 let paginaActual = 1;
 
+// Cambia este número por tu WhatsApp real (formato internacional sin + ni espacios)
+const WHATSAPP_NUMERO = "59812345678";
+
 async function cargarProductos() {
   const respuesta = await fetch('productos.txt');
   const texto = await respuesta.text();
@@ -90,6 +93,14 @@ function mostrarPagina(numPagina) {
       desc.textContent = `Descuento: ${prod.descuento} → $${prod.precioDesc}`;
       div.appendChild(desc);
     }
+
+    // Botón WhatsApp
+    const btnWhatsApp = document.createElement('a');
+    btnWhatsApp.className = 'whatsapp-btn';
+    btnWhatsApp.href = `https://wa.me/${WHATSAPP_NUMERO}?text=Hola,%20quiero%20consultar%20por%20el%20producto:%20${encodeURIComponent(prod.nombre)}`;
+    btnWhatsApp.target = "_blank";
+    btnWhatsApp.textContent = "Consultar por WhatsApp";
+    div.appendChild(btnWhatsApp);
 
     contenedor.appendChild(div);
   });
