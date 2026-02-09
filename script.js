@@ -90,7 +90,7 @@ function mostrarPagina(numPagina) {
     if (prod.descuento !== '0%') {
       const desc = document.createElement('p');
       desc.className = 'descuento';
-      desc.textContent = `Descuento: ${prod.descuento} → $${prod.precioDesc}`;
+      desc.textContent = 'Descuento: ${prod.descuento} → $${prod.precioDesc}';
       div.appendChild(desc);
     }
 
