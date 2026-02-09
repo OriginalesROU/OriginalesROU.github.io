@@ -9,21 +9,31 @@ body {
 
 /* Encabezado */
 header {
-  background: linear-gradient(135deg, #222, #444);
+  background: linear-gradient(135deg, #1a1a1a, #333);
   color: #fff;
-  padding: 30px;
+  padding: 40px 20px;
   text-align: center;
+  border-bottom: 4px solid #25D366;
+}
+
+header .logo {
+  font-size: 2em;
+  font-weight: bold;
+  color: #25D366;
+  margin-bottom: 10px;
 }
 
 header h1 {
   margin: 0;
   font-size: 2.2em;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 header p {
-  margin: 5px 0 0;
-  font-size: 1.1em;
-  color: #ddd;
+  margin: 10px 0 0;
+  font-size: 1.2em;
+  color: #bbb;
 }
 
 /* Contenedor de productos */
@@ -162,9 +172,25 @@ header p {
 
 /* Pie de página */
 footer {
-  background: #222;
-  color: #fff;
+  background: #111;
+  color: #ccc;
   text-align: center;
-  padding: 15px;
-  margin-top: 30px;
+  padding: 25px 20px;
+  margin-top: 40px;
+  border-top: 4px solid #25D366;
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 0.95em;
+}
+
+footer a {
+  color: #25D366;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
