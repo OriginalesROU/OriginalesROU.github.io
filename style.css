@@ -196,7 +196,7 @@ footer a:hover {
 }
 
 /* Vista en dispositivos móviles */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr; /* fuerza una sola columna */
     gap: 15px;
@@ -216,80 +216,23 @@ footer a:hover {
     font-size: 1em;
   }
 
-  .whatsapp-btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-
-/* Fuerza una sola columna en dispositivos móviles */
-@media only screen and (max-device-width: 1024px) and (orientation: portrait),
-       only screen and (max-device-width: 1024px) and (orientation: landscape),
-       only screen and (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr; /* siempre una columna */
-    gap: 15px;
-    padding: 10px;
-  }
-
-  .item {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .whatsapp-btn {
-    width: 100%;
-    justify-content: center;
-  }
-
-  header h1 {
-    font-size: 1.8em;
-  }
-
-  header p {
-    font-size: 1em;
-  }
-}
-
-/* Vista en dispositivos móviles */
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: 1fr; /* siempre una columna */
-    gap: 15px;
-    padding: 10px;
-  }
-
-  .item {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  header h1 {
-    font-size: 1.8em;
-  }
-
-  header p {
-    font-size: 1em;
-  }
-
   /* Botón WhatsApp más grande y alineado a la derecha */
   .whatsapp-btn {
-    width: auto;              /* no ocupa todo el ancho */
-    font-size: 1.2em;          /* texto más grande */
-    padding: 12px 20px;        /* más espacio */
-    float: right;              /* alineado a la derecha */
-    margin: 15px;              /* separación del borde */
+    width: auto;
+    font-size: 1.2em;
+    padding: 14px 22px;
+    float: right;
+    margin: 15px;
   }
 
   .whatsapp-btn img {
-    width: 28px;               /* ícono más grande */
-    height: 28px;
+    width: 30px;
+    height: 30px;
   }
 
   /* Flechas del carrusel más grandes */
   .carousel button {
-    font-size: 1.8em;          /* flechas más grandes */
-    padding: 15px;             /* más área táctil */
+    font-size: 2em;
+    padding: 18px;
   }
 }
