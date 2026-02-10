@@ -194,3 +194,29 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+/* Vista en dispositivos móviles */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* una sola columna */
+    gap: 15px; /* espacio entre tarjetas */
+    padding: 10px;
+  }
+
+  .item {
+    margin: 0 auto;
+    width: 95%; /* que ocupe casi todo el ancho */
+  }
+
+  header h1 {
+    font-size: 1.8em; /* más pequeño en móvil */
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  .whatsapp-btn {
+    width: 100%; /* botón ocupa todo el ancho en móvil */
+    justify-content: center;
+  }
+}
