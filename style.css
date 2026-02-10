@@ -195,22 +195,21 @@ footer a:hover {
   text-decoration: underline;
 }
 
-
 /* Vista en dispositivos móviles */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .grid {
-    grid-template-columns: 1fr; /* una sola columna */
-    gap: 15px; /* espacio entre tarjetas */
+    grid-template-columns: 1fr; /* fuerza una sola columna */
+    gap: 15px;
     padding: 10px;
   }
 
   .item {
+    width: 100%;
     margin: 0 auto;
-    width: 95%; /* que ocupe casi todo el ancho */
   }
 
   header h1 {
-    font-size: 1.8em; /* más pequeño en móvil */
+    font-size: 1.8em;
   }
 
   header p {
@@ -218,7 +217,7 @@ footer a:hover {
   }
 
   .whatsapp-btn {
-    width: 100%; /* botón ocupa todo el ancho en móvil */
+    width: 100%;
     justify-content: center;
   }
 }
