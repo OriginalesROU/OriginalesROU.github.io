@@ -251,3 +251,45 @@ footer a:hover {
     font-size: 1em;
   }
 }
+
+/* Vista en dispositivos móviles */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr; /* siempre una columna */
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .item {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  /* Botón WhatsApp más grande y alineado a la derecha */
+  .whatsapp-btn {
+    width: auto;              /* no ocupa todo el ancho */
+    font-size: 1.2em;          /* texto más grande */
+    padding: 12px 20px;        /* más espacio */
+    float: right;              /* alineado a la derecha */
+    margin: 15px;              /* separación del borde */
+  }
+
+  .whatsapp-btn img {
+    width: 28px;               /* ícono más grande */
+    height: 28px;
+  }
+
+  /* Flechas del carrusel más grandes */
+  .carousel button {
+    font-size: 1.8em;          /* flechas más grandes */
+    padding: 15px;             /* más área táctil */
+  }
+}
