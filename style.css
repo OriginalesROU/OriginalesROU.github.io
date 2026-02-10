@@ -195,10 +195,10 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Vista en dispositivos móviles */
-@media (max-width: 768px) {
+/* Vista en dispositivos móviles: siempre una columna */
+@media only screen and (max-width: 1024px) {
   .grid {
-    grid-template-columns: 1fr; /* fuerza una sola columna */
+    grid-template-columns: 1fr !important; /* fuerza una sola columna */
     gap: 15px;
     padding: 10px;
   }
