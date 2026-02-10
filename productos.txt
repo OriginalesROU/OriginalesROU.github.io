@@ -1,3 +1,3 @@
 1 | Lentes | Lente con filtro uvh categoria superior | lente_001.jpeg,lente_001_medidas.jpeg | Consultar | 0% | Con Descuentos.
-2 | Lentes | Gorra Gucci diseño totalmente Exclusivo | Gorra_Gucci_001.jpeg,Gorra_Gucci_001.jpeg, Gorra_Gucci_003.jpeg, Gorra_Gucci_004.jpeg | Consultar | 0% | Con Descuentos.
+2 | Gorra Gucci | Gorra Gucci diseño totalmente Exclusivo | Gorra_Gucci_001.jpeg,Gorra_Gucci_001.jpeg, Gorra_Gucci_003.jpeg, Gorra_Gucci_004.jpeg | Consultar | 0% | Con Descuentos.
 3 | Lentes | Lente con filtro uvh categoria superior | lente_001.jpeg,lente_001_medidas.jpeg | Consultar | 0% | Con Descuentos.
