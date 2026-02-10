@@ -9,10 +9,11 @@ async function cargarProductos() {
   const respuesta = await fetch('productos.txt');
   const texto = await respuesta.text();
   productos = texto.trim().split('\n').map(linea => {
-    const [id, nombre, imagenes, precio, descuento, precioDesc] = linea.split('|').map(x => x.trim());
+    const [id, nombre, descripcion, imagenes, precio, descuento, precioDesc] = linea.split('|').map(x => x.trim());
     return {
       id,
       nombre,
+      descripcion,
       imagenes: imagenes.split(','),
       precio,
       descuento,
@@ -80,6 +81,13 @@ function mostrarPagina(numPagina) {
     titulo.textContent = prod.nombre;
     div.appendChild(titulo);
 
+  // descripción
+  const descProd = document.createElement('p');
+  descProd.className = 'descripcion';
+  descProd.textContent = prod.descripcion;
+  div.appendChild(descProd);
+
+    
     // precio habitual (si es número, mostrar como precio; si es texto, mostrar tal cual)
     const precio = document.createElement('p');
     precio.className = 'precio';
