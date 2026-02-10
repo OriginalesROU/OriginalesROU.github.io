@@ -67,6 +67,12 @@ header p {
   margin: 5px 15px;
 }
 
+.descripcion {
+  margin: 10px 15px;
+  font-size: 0.95em;
+  color: #555;
+}
+
 .precio {
   font-weight: bold;
   color: #444;
