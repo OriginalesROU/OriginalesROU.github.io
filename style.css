@@ -201,8 +201,8 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Vista en dispositivos móviles: siempre una columna */
-@media only screen and (max-width: 1024px) {
+/* Vista en dispositivos móviles: paginador más grande */
+@media (max-width: 1024px) {
   .grid {
     grid-template-columns: 1fr !important; /* fuerza una sola columna */
     gap: 15px;
@@ -240,5 +240,13 @@ footer a:hover {
   .carousel button {
     font-size: 2em;
     padding: 18px;
+  }
+
+  /* Paginador más grande en móviles */
+  .paginador button {
+    font-size: 1.4em;   /* texto más grande */
+    padding: 14px 20px; /* más área táctil */
+    margin: 8px;        /* separación mayor */
+    border-radius: 8px; /* bordes más suaves */
   }
 }
