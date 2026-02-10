@@ -194,6 +194,8 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+
 /* Vista en dispositivos móviles */
 @media (max-width: 768px) {
   .grid {
