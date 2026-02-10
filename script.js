@@ -84,7 +84,7 @@ function mostrarPagina(numPagina) {
     const precio = document.createElement('p');
     precio.className = 'precio';
     if (!isNaN(prod.precio)) {
-      precio.textContent = 'Precio: $' + prod.precio;
+      precio.textContent = 'Precio: ' + prod.precio;
     } else {
       precio.textContent = prod.precio;
     }
@@ -94,7 +94,7 @@ function mostrarPagina(numPagina) {
     if (prod.descuento !== "0%" && !isNaN(prod.precio)) {
       const desc = document.createElement('p');
       desc.className = 'descuento';
-      desc.textContent = 'Descuento: ' + prod.descuento + ' → $' + prod.precioDesc;
+      desc.textContent = 'Descuento: ' + prod.descuento + ' → ' + prod.precioDesc;
       div.appendChild(desc);
     }
 
