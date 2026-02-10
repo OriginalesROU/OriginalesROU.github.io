@@ -221,3 +221,33 @@ footer a:hover {
     justify-content: center;
   }
 }
+
+
+/* Fuerza una sola columna en dispositivos móviles */
+@media only screen and (max-device-width: 1024px) and (orientation: portrait),
+       only screen and (max-device-width: 1024px) and (orientation: landscape),
+       only screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* siempre una columna */
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .item {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .whatsapp-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+}
