@@ -47,7 +47,7 @@ function mostrarPagina(numPagina) {
     // Indicador de posición
     const indicador = document.createElement('div');
     indicador.className = 'indicador';
-    indicador.textContent = `${indiceImg + 1}/${prod.imagenes.length}`;
+    indicador.textContent = (indiceImg + 1) + '/' + prod.imagenes.length;
     imgContainer.appendChild(indicador);
 
     if (prod.imagenes.length > 1) {
@@ -57,7 +57,7 @@ function mostrarPagina(numPagina) {
       prevBtn.onclick = () => {
         indiceImg = (indiceImg - 1 + prod.imagenes.length) % prod.imagenes.length;
         imagen.src = '/productos/' + prod.imagenes[indiceImg].trim();
-        indicador.textContent = `${indiceImg + 1}/${prod.imagenes.length}`;
+        indicador.textContent = (indiceImg + 1) + '/' + prod.imagenes.length;
       };
 
       const nextBtn = document.createElement('button');
@@ -66,7 +66,7 @@ function mostrarPagina(numPagina) {
       nextBtn.onclick = () => {
         indiceImg = (indiceImg + 1) % prod.imagenes.length;
         imagen.src = '/productos/' + prod.imagenes[indiceImg].trim();
-        indicador.textContent = `${indiceImg + 1}/${prod.imagenes.length}`;
+        indicador.textContent = (indiceImg + 1) + '/' + prod.imagenes.length;
       };
 
       imgContainer.appendChild(prevBtn);
@@ -80,24 +80,28 @@ function mostrarPagina(numPagina) {
     titulo.textContent = prod.nombre;
     div.appendChild(titulo);
 
-    // precio habitual
+    // precio habitual (si es número, mostrar como precio; si es texto, mostrar tal cual)
     const precio = document.createElement('p');
     precio.className = 'precio';
-    precio.textContent = `Precio: $${prod.precio}`;
+    if (!isNaN(prod.precio)) {
+      precio.textContent = 'Precio: $' + prod.precio;
+    } else {
+      precio.textContent = prod.precio;
+    }
     div.appendChild(precio);
 
-    // descuento (solo si > 0)
-    if (prod.descuento !== '0%') {
+    // descuento (solo si > 0 y si el precio es numérico)
+    if (prod.descuento !== "0%" && !isNaN(prod.precio)) {
       const desc = document.createElement('p');
       desc.className = 'descuento';
-      desc.textContent = 'Descuento: ${prod.descuento} → $${prod.precioDesc}';
+      desc.textContent = 'Descuento: ' + prod.descuento + ' → $' + prod.precioDesc;
       div.appendChild(desc);
     }
 
     // Botón WhatsApp con ícono + texto
     const btnWhatsApp = document.createElement('a');
     btnWhatsApp.className = 'whatsapp-btn';
-    btnWhatsApp.href = `https://wa.me/${WHATSAPP_NUMERO}?text=Hola,%20quiero%20consultar%20por%20el%20producto:%20${encodeURIComponent(prod.nombre)}`;
+    btnWhatsApp.href = 'https://wa.me/' + WHATSAPP_NUMERO + '?text=Hola,%20quiero%20consultar%20por%20el%20producto:%20' + encodeURIComponent(prod.nombre);
     btnWhatsApp.target = "_blank";
 
     const icono = document.createElement('img');
