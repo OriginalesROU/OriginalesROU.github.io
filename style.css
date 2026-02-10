@@ -244,8 +244,8 @@ footer a:hover {
 
   /* Paginador más grande en móviles */
   .paginador button {
-    font-size: 1.8em;   /* texto más grande */
-    padding: 24px 28px; /* más área táctil */
+    font-size: 2em;   /* texto más grande */
+    padding: 16px 24px; /* más área táctil */
     margin: 8px;        /* separación mayor */
     border-radius: 8px; /* bordes más suaves */
   }
