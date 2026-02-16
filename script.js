@@ -3,7 +3,7 @@ let productos = [];
 let paginaActual = 1;
 
 // Cambia este número por tu WhatsApp real (formato internacional sin + ni espacios)
-const WHATSAPP_NUMERO = "+0059896453385";
+const WHATSAPP_NUMERO = "+59896453385";
 
 async function cargarProductos() {
   const respuesta = await fetch('productos.txt');
